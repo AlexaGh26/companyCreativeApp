@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="div_principal">
+        <section class="first_section" id="section1">
+            <nav id="menuBar" >
+                <span class="label-menu" v-if="!expanded" @click="expanded = toggleMenu(expanded)">MENU</span>
+                <div v-if="!expanded" class="container-bars">
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                </div>
+                <ul v-bind:style="{width: expanded ? '100px' : 0, height: expanded ? '300px' : 0}" class="menu" @click="expanded = toggleMenu(expanded)">
+                    <li><a href="#section1"> 1- HOME</a> </li>
+                    <li><a href="#section2"> 2- SERVICES</a></li>
+                    <li><a href="#section3"> 3- ABOUT US</a></li>
+                    <li><a href="#section4"> 4- PORFOLIO</a></li>
+                </ul>
+            </nav><br>
+            <section class="section1_1" id="section_pag_1">
+                <article class="contenedor_text1" id="art_text_main1">
+                    <span class="text_one_page"> ONE PAGE</span><br>
+                    <span class="text_multi_pur"> MULTI-PURPOSE THEME</span><br>
+                </article><br><br><br>
+                <article class="contenedor_text2">
+                    <ul class="text_premium">Premium one page multi purpose theme perfect for everyone
+                        star using Moxie today!</span><br><br><br><br>
+                        <div class="Button_section1">GET STARTED</div>
+                </article>
+                <div class="down_button">
+                    <div class="opacity"></div>
+                    <a href="#section2">
+                        <button class="style_button2"></button class="style_button2">
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <section class="two_section" id="section2">
+            <section class="section2_1">
+                <article>
+                    <span class="text_sect2_1">BRINGING YOU PROVEN RESULTS</span><br>
+                    <span class="text_sect2_2">OUR SERVICES</span class="text_sect2_2"><br>
+                </article>
+                <article class="lines">
+                    <div class="line_Blue1"></div>
+                    <img class="star" src="./img/star.PNG" alt="">
+                    <div class="line_blue2"></div>
+                </article><br><br>
+                <span class="text_sect2_3">Moxie comes built with a cool interactive tab system custom built by Pulsar
+                    Media</span>
+            </section>
+            <section class="img_barra_click">
+                <div class="cuadro_click">
+                    <div class="marketing">
+                        <a href="#section3">
+                            <img class="img_icon_click" src="./img/ICONO1SF.png" alt=""></a><br><br>
+                        <span class="name_click">Marketing</span class="name_click">
+                    </div>
+                    <div class="advertising">
+                        <img class="img_icon_click" src="./img/ICONO2SF.png" alt=""><br><br>
+                        <span class="name_click">Advertising</span class="name_click">
+                    </div>
+                    <div class="cloud_storage">
+                        <img class="img_icon_click" src="./img/ICONO3SF.png" alt=""><br><br>
+                        <span class="name_click3">Cloud Storage</span class="name_click">
+                    </div>
+                    <div class="consulting">
+                        <img class="img_icon_click" src="./img/ICONO4SF.png" alt=""><br><br>
+                        <span class="name_click4">Consulting</span class="name_click">
+                    </div>
+                </div>
+            </section><br><br>
+            <div class="style_div_click" id="articles">
+                <article class="alignment">
+                    <span class="texts_barra_click">Marketing</span>
+                    <img class="tam_img" src="./img/icon_mkt1.PNG" alt="">
+                </article><br>
+                <div class="line_peq"></div><br>
+                <p v-bind:style="{height: expanded ? '150px' : '50px'}" class="style_text_lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                    laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur</p>
+                <img @click="expanded = toggle(expanded)" class="img_abajo" src="./img/abajo11.PNG" alt="">
+            </div>
+        </section>
+
+        <section class="three_section" id="section3">
+            <section class="section3_1">
+                <div class="org_set_3_1">
+                    <img class="img_sect_3_2" src="./img/portafolio.PNG" alt=""><br>
+                    <span class="text_sect3_4">AUG 2014</span><br><br>
+                    <SPan class="style_text_cort">"Investors welcome"</SPan>
+                </div>
+                <img class="img_sect3_1" src="./img/line_tree_section.PNG" alt="">
+            </section>
+            <section class="section3_2">
+                <article>
+                    <span class="text_sect3_2">SOME OF OUR ACCOMPLISHMENTS</span><br><br>
+                    <span class="text_sect3_1">ABOUT US</span><br>
+                </article><br>
+                <article class="lines3">
+                    <div class="line_Blue3_1"></div>
+                    <img class="star3" src="./img/star3.PNG" alt="">
+                    <div class="line_blue3_2"></div>
+                </article><br><br><br><br>
+                <span class="text_sect3_3">INVESTMENT DEAL INKED - PULSAR MEDIA STOCKS SKYROCKET.
+                </span><br><br>
+                <div class="line_blue3"></div><br><br>
+                <span class="style_text_lg3">Donect ut augue in dolor tristique fermentum. Donec nec gravida ex, eget
+                    hendreit. Vestibulum accumsan orci sem, in dictum lacus vulputate eget. Donect ut augue in dolor
+                    tristique fermentum. Donec nec gravida ex, eget hendreit. Vestibulum accumsan orci sem, in dictum
+                    lacus vulputate eget. Donect ut augue in dolor tristique fermentum. Donec nec gravida ex, eget
+                    hendreit. Vestibulum accumsan orci sem, in dictum lacus vulputate eget. Donect ut augue in dolor
+                    tristique fermentum. Donec nec gravida ex, eget hendreit. Vestibulum accumsan orci sem, in dictum
+                    lacus vulputate eget.</span><br><br>
+                <span class="style_text_lg3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+            </section>
+        </section>
+
+        <section class="four_section" id="section4">
+            <section class="section4_1">
+                <div>
+                    <span class="text_sect2_1">SHOWCASINSG OUR ADVERTURE</span><br>
+                    <span class="text_sect2_2">PORTFOLIO</span class="text_sect2_2"><br>
+                </div>
+                <div class="lines">
+                    <div class="line_Blue1"></div>
+                    <img class="star" src="./img/star.PNG" alt="">
+                    <div class="line_blue2"></div>
+                </div><br><br>
+                <span class="text_sect4_1">Present your images and videos whith this beautiful gallery system designed
+                    by Pulsar Media and powered by the isotope engine</span><br><br>
+                <div class="link_photos">
+                    <ul class="ulsec4" id="ejm2">
+                        <li><a href="#">ALLL</a></li>
+                        <li><a href="#">PHOTOGRAPHY</a></li>
+                        <li><a href="#">DESIGN</a></li>
+                        <li><a href="#">MARKETING</a></li>
+                        <li><a href="#">VIDEOS</a></li>
+                        <li><a href="#">NATURE</a></li>
+
+                    </ul>
+                </div>
+            </section>
+            <section class="section4_2" id="section4.2">
+                <div class="div_arts" id="imgs">
+                    <div v-for="item in imgsArr">
+                        <div class="container-card" @mouseout="hover(item)" @mouseover="hover(item)">
+                            <img class="art" v-bind:src="item.url"
+                                alt="">
+                            <div v-if="item.hovered" class="hover-card">
+                                <div class="hover-card2">
+                                <span class="title-card">{{item.title}}</span>
+                                    <span class="style_punts">.........</span>
+                                    <article class="paddin_caj">
+                                        <span class="text_card">Lorem Ipsum dolor sit amet, consectetur adipiscing elit
+                                            phasellus vitae
+                                            lobortis nibn...<span style="color:#0DB7C4;">[...]</span></span>
+                                    </article>
+                                    <article class="cont_imgs">
+                                        <img class="bot_hover_card" src="./img/menusect4.png" alt="">
+                                        <img class="bot_hover_card" src="./img/camarasection4.png" alt="">
+                                        <img class="bot_hover_card2" src="./img/equissect4.png" alt="">
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="section5">
+            <span class="text_sect2_1">HAVE A QUESTION?</span><br>
+            <span class="text_sect2_2">CONTACT US</span class="text_sect2_2"><br>
+                <div class="lines">
+                    <div class="line_Blue1"></div>
+                    <img class="star" src="./img/star.PNG" alt="">
+                    <div class="line_blue2"></div>
+                </div><br><br>
+                <div class="container-icons-sect-5">
+                    <div class="container-img-text">
+                        <img class="img_sect5" src="./img/ubicacionsection5.png" alt="">
+                        <span class="img-label">1 Dundas St. West - toronto, Canada L4K 9JW</span>
+                    </div>
+                    <div class="container-img-text">
+                        <img class="img_sect5" src="./img/telefonosetion5.png" alt="">
+                        <span class="img-label">1-888-555-5584</span>
+                    </div>
+                    <div class="container-img-text">
+                        <img class="img_sect5" src="./img/emailsection5.png" alt="">
+                        <span class="img-label">Info@moxietheme.com</span>
+                    </div>
+                </div>
+                <div id="map"></div>
+                <form class="form" onsubmit="event.preventDefault()">
+                        <input placeholder="Fisrt Name*" type="text" name="name">
+                        <input placeholder="Last Name*" type="text" name="custom-lastName">
+                        <input placeholder="Email Address *" type="text" name="email">
+                        <input placeholder="Phone Number" type="text" name="custom-phone">
+                        <textarea placeholder="Message *" name="custom-msg"> </textarea>
+                        <button>SUBMIT</button>
+                </form>
+        </section>
+        <footer></footer>
+        <i class="fas fa-phone-alt"></i>
+            <script src="./JS/functions.js"></script>
+            <script>
+                !function(e,n,t,c,y,s,r,u){s=n.createElement(t),r=n.getElementsByTagName(t)[0],
+                s.async=!0,s.src=c,r.parentNode.insertBefore(s,r),
+                s.onload = function () {Pimex.init(y, true)}}
+                (window,document,'script','http://statics.pimex.co/services/async.js', {id: 14557, token: "2ofzTRwdkLjKZPr3nx4gXeh6H"});
+              </script>
+               <script>
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: -34.397, lng: 150.644},
+                    zoom: 8
+                  });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_W-hkFLQtud5QhdazZVHBS8NAuJ0gQjw&callback=initMap"
+    async defer></script>
+</body>
+
+</html>
